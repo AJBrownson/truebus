@@ -1,10 +1,12 @@
-
+import GlobalStyle from "./Assets/Globalstyles";
+import Navbar from "./Layout/NavBar/Navbar";
 
 
 function App() {
   return (
     <>
-      what's good fam
+      <GlobalStyle />
+      <Navbar />
     </>
   );
 }
