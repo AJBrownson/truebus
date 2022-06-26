@@ -30,6 +30,7 @@ align-items: center;
 font-size: 2rem;
 font-weight: 600;
 color: white;
+cursor: pointer;
 
 & > img {
     width: 50px;
@@ -71,12 +72,13 @@ align-items: center;
 text-decoration: none;
 list-style: none;
 padding: 0.5rem 1rem;
-height: 100%;
+height: 80%;
+cursor: pointer;
 `;
 
 export const Button = styled.a`
 border-radius: 3px;
-padding: 0.5rem 0;
+padding: 10px 22px;
 margin: 0.5rem 1rem;
 width: 7rem;
 background: transparent;
