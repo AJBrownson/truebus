@@ -2,8 +2,7 @@ import styled from 'styled-components'
 
 
 export const Wrapper = styled.div`
-border-bottom-left-radius: 50px;
-height: 80vh;
+
 `;
 
 
@@ -18,7 +17,11 @@ height: 80px;
 
 
 @media screen and (max-width: 768px) {
-    
+    position: absolute;
+    width: 375px;
+    height: 45px;
+    left: 0px;
+    top: 0px;
 }
 `;
 
@@ -43,6 +46,24 @@ cursor: pointer;
 `;
 
 
+
+export const HamburgerIcon = styled.div`
+display: none;
+
+
+@media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 68%);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+`;
+
+
+
 export const Menu = styled.div`
 display: flex;
 flex-direction: row;
@@ -55,6 +76,20 @@ display: flex;
 align-items: center;
 list-style: none;
 text-align: center;
+
+
+@media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: ${({click}) => (click ? 0 : '-100%')};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #fff;
+}
 `;
 
 
