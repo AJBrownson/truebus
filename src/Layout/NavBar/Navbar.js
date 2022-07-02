@@ -15,16 +15,17 @@ const Navbar = () => {
     <>
         <Wrapper>
             <Nav>
+
                 <NavLogo to ='/' onClick={closeMobileMenu}>
                     <img src={Logo} alt='TrueBus Company Logo' />
                     TrueBus
                 </NavLogo>
-
-                <HamburgerIcon>
+                
+                <HamburgerIcon onClick = {handleClick}>
                     {click ? <FaTimes /> : <FaBars />}
                 </HamburgerIcon>
 
-                <Menu>
+                {/* <Menu> */}
                     <NavMenu onClick='handleClick' click={click}>
                         <NavItem>
                             <NavLinks>Plan a Trip</NavLinks>
@@ -50,7 +51,7 @@ const Navbar = () => {
                         <Button>Login/Register</Button>
                     </NavMenu>
                     
-                </Menu>
+                {/* </Menu> */}
             </Nav>
         </Wrapper>
     </>
