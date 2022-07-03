@@ -70,7 +70,7 @@ export const Action =  styled.p`
 
 @media screen and (max-width: 768px) {
     display: block;
-    border-radius: 3px;
+    // border-radius: 3px;
     padding: 0.5rem 5rem;
     margin: 0.5rem auto;
     width: 9rem;
@@ -101,10 +101,16 @@ export const ActionDropDown = styled.div`
     position: absolute;
     top: 90%;
     left: 0;
-    padding: 40px;
-    align-items: center;
-    justify-content: center;
+    margin-left: 34px;
+    margin-right: 34px;
+    text-align: center;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.09);
+
+    > span {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 `;
 
