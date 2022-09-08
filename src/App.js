@@ -1,15 +1,18 @@
 import GlobalStyle from "./Assets/Globalstyles";
 import Navbar from "./Layout/NavBar/Navbar";
-import Home from "./Pages/Home/Home";
+import Footer from "./Layout/Footer/Footer";
+import Routing from "./Routing/Routing";
+
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <Navbar />
-      <Home />
+      <Routing />
+      <Footer />
     </>
   );
 }
 
-export default App;
+export default App

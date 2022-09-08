@@ -1,32 +1,39 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Hero from '../../Assets/Images/hero-image.png'
-import { HeroComponent, Wrapper, CTA, Action, ActionDropDown } from './Home.styles'
+import { HeroComponent, Wrapper, Div, Card } from './Home.styles'
+import Buttons from '../../Components/DropdownButton/Button'
+import { FaAngleRight } from 'react-icons/fa'
+import Status from '../../Components/StatusSnippet/Status'
+import Explore from '../../Components/Explore/Explore'
+import Maps from '../../Components/Maps/Maps'
+import SideBar from '../../Layout/SideBar/SideBar.tsx'
 
 
 
 const Home = () => {
-  const [isActive, setIsActive] = useState(false)
+  
   return (
     <>
-        <Wrapper>
-            <HeroComponent>
-              <div>
-                <img src={Hero} alt='Hero' />
-              </div>
-            </HeroComponent>
-            <CTA>
-                <Action primary><span>Plan a Trip</span></Action>
-                <Action 
-                    onClick={(e) => setIsActive(!isActive)}><span>Check Trip</span></Action>
-                {isActive && (
-                   <ActionDropDown>
-                   <h6>You haven't saved any trip yet</h6>
-                   <p>Plan a trip and save it for quick access in the future</p>
-                   <button>Plan a Trip</button>
-                 </ActionDropDown>
-                )}
-              </CTA>
-        </Wrapper>
+
+    {/* <SideBar /> */}
+    
+      <Wrapper>
+        <HeroComponent>
+        <img src={Hero} alt='Snapshot of a yellow bus' />
+        </HeroComponent>
+
+        <Div>
+          <Buttons />
+          <Status />
+          <Card>
+            <h3>Fare</h3>
+            <FaAngleRight />
+          </Card>
+          <Explore />
+          <Maps />
+        </Div>
+  
+      </Wrapper>
     </>
   )
 }

@@ -22,17 +22,15 @@ height: 80px;
     height: 75px;
     left: 0px;
     top: 0px;
-    display: flex;
 }
 `;
 
 
 export const NavLogo = styled.div`
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-size: 2rem;
-font-weight: 600;
+// display: flex;
+// justify-content: space-between;
+// align-items: center;
+transform: translate(500%, 68%);
 color: white;
 cursor: pointer;
 
@@ -54,15 +52,11 @@ cursor: pointer;
 
 
 export const HamburgerIcon = styled.div`
-display: none;
-
-
-@media screen and (max-width: 768px) {
-    display: block;
+    display: flex;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(-100%, 68%);
+    left: 0;
+    transform: translate(100%, 68%);
     font-size: 1.8rem;
     cursor: pointer;
     color: white;
@@ -71,11 +65,11 @@ display: none;
 
 
 
-export const Menu = styled.div`
-display: flex;
-flex-direction: row;
+// export const Menu = styled.div`
+// display: flex;
+// flex-direction: row;
 
-`;
+// `;
 
 
 export const NavMenu = styled.ul`
@@ -91,7 +85,7 @@ text-align: center;
     flex-direction: column;
     width: 60%;
     height: 90vh;
-    position: absolute;
+    // position: absolute;
     top: 60px;
     left: ${({click}) => (click ? 0 : '-100%')};
     opacity: 1;
